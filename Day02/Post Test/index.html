@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Post Test</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <script>
+        var ukuran={
+            n : 9,
+            nilaiT : null,
+            nilai1 : 0,
+            nilai2 : 1,
+            nilai3 : null
+        }
+        ukuran.nilaiT=((ukuran.n-1)/2);
+        for (var i = 0; i < ukuran.n; i++) {
+            for (var j = 0; j < ukuran.n; j++) {
+                if(j==ukuran.nilaiT || (j+i==ukuran.n-1 || j==i) && i>=ukuran.nilaiT){
+                    document.write(ukuran.nilai2+"&ensp;");
+                } else{
+                    document.write("&ensp;"+"&ensp;");
+                }
+            }
+            document.write("<br/>");
+            ukuran.nilai3=ukuran.nilai1+ukuran.nilai2;
+            ukuran.nilai1=ukuran.nilai2;
+            ukuran.nilai2=ukuran.nilai3;
+        }
+    </script>
+    </body>
+</html>

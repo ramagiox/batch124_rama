@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Latihan 7</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        var ukuran ={
+            n:9,
+            nilaiB : null,
+            nilaiT : null,
+            genap : null,
+            ganjil : 1
+        };
+        ukuran.genap = (ukuran.n-1)*2;
+        ukuran.nilaiT = (ukuran.n-1)/2;
+        ukuran.nilaiB = ukuran.n-1;
+        for (var i = 0; i < ukuran.n; i++) {
+            for (var j = 0; j < ukuran.n; j++) {
+                if ((j>=i && i<=ukuran.nilaiT && j<=ukuran.nilaiB) || (j<=i && i>ukuran.nilaiT && j>=ukuran.nilaiB )) {
+                    if(j==i){
+                        document.write(ukuran.ganjil + "&ensp;");
+                    } else if(j+i==ukuran.n-1){
+                        document.write(ukuran.genap + "&ensp;");
+                    } else if(j<=ukuran.nilaiB){
+                        document.write("A"+ "&ensp;");
+                    } else{
+                        document.write("B"+ "&ensp;");
+                    }
+                } else {
+                    document.write("&ensp;" + "&ensp;");
+                }
+            }
+            document.write("<br/>");
+            ukuran.nilaiB--;
+            ukuran.ganjil = ukuran.ganjil+2;
+            ukuran.genap = ukuran.genap-2;
+        }
+    </script>
+</body>
+
+</html>

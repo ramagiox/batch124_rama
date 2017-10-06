@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var ukuran={
+        n:9,
+        ganjil:1,
+        genap1:null,
+        genap2:0,
+        nilaiT:null   
+    }
+    ukuran.genap1 = (ukuran.n-1)*2;
+    ukuran.nilaiT=(ukuran.n-1)/2;
+    for (var i = 0; i < ukuran.n; i++) {
+        for (var j = 0; j < ukuran.n; j++) {
+            if(j==i || j==ukuran.nilaiT){
+                document.write(ukuran.ganjil+"&ensp;");
+            } else if(j+i==ukuran.n-1){
+                document.write(ukuran.genap1+"&ensp;");
+            } else if(i==ukuran.nilaiT){
+                document.write(ukuran.genap2+"&ensp;");
+                if(j==ukuran.nilaiT-1){
+                    ukuran.genap2=ukuran.genap2+4;
+                }else{
+                    ukuran.genap2=ukuran.genap2+2;
+                }
+            } 
+            else{
+                document.write("&ensp;&ensp;");
+            }
+        }
+        ukuran.ganjil=ukuran.ganjil+2;
+        ukuran.genap1=ukuran.genap1-2;
+        document.write("<br/>");
+    }
+    </script>
+</body>
+</html>
