@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Latihan 10</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <script>
+        var n=9;
+        var nt=((n-1)/2);
+        for (var i = 0; i < n; i++) {
+            for (var j = 0; j < n; j++) {
+                if(j==nt || (j+i==n-1 || j==i) && i>=nt){
+                    document.write("*"+"&ensp;");
+                } else{
+                    document.write("&ensp;"+"&ensp;");
+                }
+            }
+            document.write("<br/>");
+        }
+    </script>
+    </body>
+</html>
